@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  m_configObjects:
+    Niantic.Lightship.AR.LightshipSettings: {fileID: 11400000, guid: 443e11b0846342948ab15d75d4e5e60b, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e0f7d426660203f498ccf0ebd00ddbd1, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: c932b208697324e4990adb3d46bce584, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: e9dff06e155a66b44bae7398492f733c, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8de0e0749394f774f9227a8e6e289970, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 4462dd753e13fb640a2a9149c892fae6, type: 2}
