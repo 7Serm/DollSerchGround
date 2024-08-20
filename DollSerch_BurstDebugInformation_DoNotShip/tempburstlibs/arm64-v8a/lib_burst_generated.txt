@@ -7,6 +7,7 @@ Library: C:\Unity\DollSerchProject\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_
 --dump=Function
 --float-precision=Standard
 --target-framework=NetFramework
+--assembly-defines=Assembly-CSharp;
 --assembly-defines=Draco;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;

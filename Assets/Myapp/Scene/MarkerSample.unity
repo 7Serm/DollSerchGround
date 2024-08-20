@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192902986}
   - component: {fileID: 192902985}
+  - component: {fileID: 192902987}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -173,6 +174,21 @@ Transform:
   - {fileID: 1818604554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192902987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192902984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedLibrary: {fileID: 11400000, guid: 6e011e9d27640d84d83c8d26b023eddf, type: 2}
+  m_MaxNumberOfMovingImages: 0
+  m_TrackedImagePrefab: {fileID: 4443057632139045934, guid: 45efb7e8164163a4c9e4b587e23d954c, type: 3}
 --- !u!1 &475008275
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,8 +200,6 @@ GameObject:
   - component: {fileID: 475008280}
   - component: {fileID: 475008279}
   - component: {fileID: 475008278}
-  - component: {fileID: 475008277}
-  - component: {fileID: 475008276}
   m_Layer: 0
   m_Name: AR Session
   m_TagString: Untagged
@@ -193,38 +207,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &475008276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475008275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedLibrary: {fileID: 0}
-  m_MaxNumberOfMovingImages: 1
-  m_TrackedImagePrefab: {fileID: 4443057632139045934, guid: 45efb7e8164163a4c9e4b587e23d954c, type: 3}
---- !u!114 &475008277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475008275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Camera: {fileID: 0}
-  m_OriginBaseGameObject: {fileID: 475008275}
-  m_CameraFloorOffsetObject: {fileID: 0}
-  m_RequestedTrackingOriginMode: 0
-  m_CameraYOffset: 1.1176
 --- !u!114 &475008278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567be0de712ae264fbafecca1cce5cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _imageManager: {fileID: 475008276}
+  _imageManager: {fileID: 0}
 --- !u!4 &691238287
 Transform:
   m_ObjectHideFlags: 0
