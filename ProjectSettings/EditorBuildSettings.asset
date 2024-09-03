@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Myapp/Scene/MarkerSample.unity
     guid: cee603372f06421409852827b69f128b
+  - enabled: 0
+    path: Assets/Myapp/Scene/NaviMesh.unity
+    guid: 0292b57955314be448766cd8d82fbfe4
+  - enabled: 1
+    path: Assets/Myapp/Scene/MainScene.unity
+    guid: 0d4a215a17ef5fd458851f9fdbc4a4e2
   m_configObjects:
     Niantic.Lightship.AR.LightshipSettings: {fileID: 11400000, guid: 443e11b0846342948ab15d75d4e5e60b, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e0f7d426660203f498ccf0ebd00ddbd1, type: 2}
