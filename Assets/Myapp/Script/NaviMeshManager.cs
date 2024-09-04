@@ -1,6 +1,5 @@
 using Niantic.Lightship.AR.NavigationMesh;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 
 public class NaviMeshManager : MonoBehaviour
 {
@@ -15,18 +14,26 @@ public class NaviMeshManager : MonoBehaviour
 
     private LightshipNavMeshAgent _agentInstance;
 
+    private Vector3 _prehabposition;
+
     [SerializeField]
     private GameObject _marker;
 
+    private GameObject _markerOBj;
+
     void Update()
     {
-        if (_agentInstance == null)
+        if (_markerOBj == null)
         {
             FindObj();
+            if(_agentPrefab != null)
+            {
+                InstatiatePrehab();
+            }
         }
         else
         {
-           // _marker.SetActive(false);
+
             HandleTouch();
         }
 
@@ -46,9 +53,10 @@ public class NaviMeshManager : MonoBehaviour
     }
     private void FindObj()
     {
-        GameObject gobj = GameObject.FindWithTag("Agent");
-        var _agentcomp = gobj.GetComponent<LightshipNavMeshAgent>();
-        _agentInstance = _agentcomp;
+        _markerOBj = GameObject.FindWithTag("AgentBase");
+        _prehabposition = _markerOBj.GetComponent<Vector3>();
+        //var _agentcomp = gobj.GetComponent<LightshipNavMeshAgent>();
+        //_agentInstance = _agentcomp;
     }
 
     private void HandleTouch()
@@ -76,14 +84,23 @@ public class NaviMeshManager : MonoBehaviour
             {
                 if (_agentInstance == null)
                 {
-                    // _agentInstance = Instantiate(_agentPrefab);
-                    _agentInstance.transform.position = hit.point;
+                    /*_agentInstance = Instantiate(_agentPrefab,_prehabposition,Quaternion.identity);
+                   _agentInstance.transform.position = hit.point;*/
                 }
                 else
                 {
                     _agentInstance.SetDestination(hit.point);
                 }
             }
+        }
+    }
+
+
+    private void InstatiatePrehab()
+    {
+        if (_agentInstance == null)
+        {
+            _agentInstance = Instantiate(_agentPrefab, _prehabposition, Quaternion.identity);
         }
     }
 }
